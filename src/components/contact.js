@@ -24,7 +24,7 @@ function Contact() {
           <input onChange={handleChange} type='text' name='fname' placeholder='First Name' value={formValues.fname} />
           <input onChange={handleChange} type='text' name='lname' placeholder='Last Name' value={formValues.lname} />
           <input onChange={handleChange} type='text' name='email' placeholder='Email' value={formValues.email} />
-          <input onChange={handleChange} type='text' name='tel' placeholder='Telefon' value={formValues.tel} />
+          <input onChange={handleChange} type='text' name='tel' placeholder='Tel' value={formValues.tel} />
 
           <input type='submit' />
         </form>
