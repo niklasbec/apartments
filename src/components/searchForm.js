@@ -1,22 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 
+
 function SearchForm(props) {
 
     const handleSubmit = event => {
         event.preventDefault()
-        
+      
         props.setState({...props.state, returnData: props.state.searchData.filter(curr => {
-            return curr.locationCity.toLowerCase() === props.state.form.location.toLowerCase()
-        })})  
+            return curr.locationCity.toLowerCase().includes(props.state.form.location.toLowerCase())
+        })})      
     }
 
         const handleChange = event => {
             props.setState({...props.state, form: {
                 location: event.target.value
             }})
-            console.log(props.state)
-    }
+          }
 
   return (
     <div className="App">
